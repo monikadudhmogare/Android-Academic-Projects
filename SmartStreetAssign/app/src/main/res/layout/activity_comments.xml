@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bknew"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/RateMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black"
+        android:gravity="center"
+        android:text="RATE ME"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/com_facebook_share_button_text_color"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/txtRatingValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <RatingBar
+        android:id="@+id/ratingStar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:background="@android:color/black"
+        android:foregroundGravity="center"
+        android:numStars="4"
+        android:rating="2.0"
+        android:stepSize="1.0"
+        android:layout_marginEnd="78dp"
+        android:layout_below="@+id/comment"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/submit"
+        android:layout_toEndOf="@+id/txtRatingValue"
+        android:text=""
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_orange_light"
+        android:text="Submit"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/ratingStar"
+        android:layout_alignStart="@+id/retrieve"
+        android:layout_marginStart="34dp" />
+
+    <EditText
+        android:id="@+id/comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/RateMe"
+        android:layout_marginTop="83dp"
+        android:layout_toEndOf="@+id/txtRatingValue"
+        android:background="@color/com_facebook_button_login_silver_background_color"
+        android:ems="10"
+        android:hint="Comment Here:"
+        android:inputType="textPersonName"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/retrieve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:background="@android:color/holo_orange_light"
+        android:onClick="onRetrieveClick"
+        android:text="Retrieve Comments"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/submit"
+        android:layout_alignEnd="@+id/ratingStar" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/retrieve"
+        android:layout_toEndOf="@+id/txtRatingValue"
+        android:background="@color/com_facebook_button_background_color_disabled" />
+
+</RelativeLayout>
