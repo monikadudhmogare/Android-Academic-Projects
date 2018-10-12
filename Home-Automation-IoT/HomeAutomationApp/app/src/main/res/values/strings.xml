@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Home Automation App</string>
+    <string name="led1_text">LED 1</string>
+    <string name="led2_text">LED 2</string>
+    <string name="led2_bt_text">LED 2</string>
+    <string name="action_settings">settings</string>
+
+
+</resources>
